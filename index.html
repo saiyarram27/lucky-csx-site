@@ -3,116 +3,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky CSX</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+        }
+    </script>
     <style>
         body {
-            background-color: #0d0d0d;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
+            background: #0a0a0a;
+            color: white;
+            transition: background 0.3s, color 0.3s;
         }
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: linear-gradient(90deg, #1a1a1a, #333399);
-            box-shadow: 0 4px 10px rgba(255, 0, 255, 0.2);
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-        }
-        .profile-pic {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            margin-right: 15px;
-            border: 2px solid #ff00ff;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #ff00ff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            color: #00ffff;
-            text-shadow: 0 0 10px #00ffff;
-        }
-        section {
-            padding: 50px 20px;
-        }
-        footer {
-            background: #111;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .social-icons img {
-            width: 30px;
-            margin: 10px;
-            transition: transform 0.3s;
-        }
-        .social-icons img:hover {
-            transform: scale(1.2);
-            filter: drop-shadow(0 0 10px #ff00ff);
+        .light-mode {
+            background: #f5f5f5;
+            color: black;
         }
     </style>
 </head>
-<body>
-    <header>
-        <div class="profile-container">
-            <img src="profile.jpg" alt="Sai's Profile Picture" class="profile-pic">
-            <h1>Lucky CSX</h1>
+<body class="bg-gray-900 text-white">
+    <header class="p-6 bg-gray-800 shadow-md flex items-center">
+        <img src="profile.jpg" alt="Profile Picture" class="w-16 h-16 rounded-full mr-4">
+        <div>
+            <h1 class="text-4xl font-bold text-blue-400">Lucky CSX</h1>
+            <p class="text-gray-400">Create. Share. Explore.</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header><section id="home">
-    <h2>Welcome to Lucky CSX</h2>
-    <p>Tech, creativity, and exploration—all in one place.</p>
-</section>
+        <button onclick="toggleTheme()" class="ml-auto px-4 py-2 bg-yellow-500 text-black rounded">Toggle Theme</button>
+    </header><main class="container mx-auto p-6">
+    <section class="mb-8 text-center">
+        <h2 class="text-3xl font-semibold text-blue-300">🚀 Welcome to Lucky CSX</h2>
+        <p class="text-gray-300 mt-2">A hub for tech insights, coding tricks, and more.</p>
+    </section>
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-green-400">📂 Resources</h3>
+            <p class="text-gray-400 mt-2">Explore coding guides, project files, and useful tools.</p>
+            <a href="#" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">View Resources</a>
+        </div>
+        
+        <div class="p-6 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-yellow-400">📜 Latest Blog</h3>
+            <p class="text-gray-400 mt-2">Check out the latest insights and coding articles.</p>
+            <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 px-4 py-2 rounded">Read Blogs</a>
+        </div>
+        
+        <div class="p-6 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition">
+            <h3 class="text-xl font-semibold text-red-400">🎥 YouTube Videos</h3>
+            <p class="text-gray-400 mt-2">Watch my latest videos directly here.</p>
+            <a href="#" class="mt-4 inline-block bg-red-500 hover:bg-red-600 px-4 py-2 rounded">Watch Now</a>
+        </div>
+    </section>
+</main>
 
-<section id="resources">
-    <h2>Resources</h2>
-    <p>Download coding resources, cheat sheets, and more.</p>
-</section>
-
-<section id="blog">
-    <h2>Blog</h2>
-    <p>Read the latest insights and tech updates.</p>
-</section>
-
-<section id="projects">
-    <h2>Project Showcase</h2>
-    <p>Check out exciting projects and collaborations.</p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Lucky CSX. All rights reserved.</p>
-    <div class="social-icons">
-        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-        <a href="#"><img src="github-icon.png" alt="GitHub"></a>
-        <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
+<footer class="p-6 text-center bg-gray-800 mt-8">
+    <p class="text-gray-400">© 2025 Lucky CSX | All rights reserved.</p>
+    <div class="mt-4 flex justify-center space-x-4">
+        <a href="#" class="text-blue-400 text-2xl hover:text-blue-500">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-blue-600 text-2xl hover:text-blue-700">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="text-red-600 text-2xl hover:text-red-700">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="text-purple-500 text-2xl hover:text-purple-600">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="text-gray-300 text-2xl hover:text-gray-400">
+            <i class="fab fa-github"></i>
+        </a>
     </div>
 </footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
