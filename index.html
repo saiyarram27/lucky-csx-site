@@ -3,63 +3,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucky CSX</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: linear-gradient(90deg, #1a1a1a, #333399);
+            box-shadow: 0 4px 10px rgba(255, 0, 255, 0.2);
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid #ff00ff;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #ff00ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff;
+        }
+        section {
+            padding: 50px 20px;
+        }
+        footer {
+            background: #111;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 30px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+        .social-icons img:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px #ff00ff);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white"><header class="p-6 bg-gray-800 shadow-md flex items-center">
-    <img src="profile.jpg" alt="Profile Picture" class="w-16 h-16 rounded-full mr-4">
-    <div>
-        <h1 class="text-4xl font-bold text-neon">Lucky CSX</h1>
-        <p class="text-gray-400">Create. Share. Explore.</p>
-    </div>
-</header>
-
-<nav class="p-4 bg-gray-800 shadow-md flex justify-between">
-    <a href="#" class="text-neon hover:text-blue-400">Home</a>
-    <a href="#resources" class="text-neon hover:text-blue-400">Resources</a>
-    <a href="#blog" class="text-neon hover:text-blue-400">Blog</a>
-    <a href="#projects" class="text-neon hover:text-blue-400">Projects</a>
-    <a href="#contact" class="text-neon hover:text-blue-400">Contact</a>
-</nav>
-
-<main class="container mx-auto p-6">
-    <section class="mb-8 text-center">
-        <h2 class="text-3xl font-semibold">🚀 Welcome to Lucky CSX</h2>
-        <p class="text-gray-300 mt-2">A hub for tech insights, coding tricks, and more.</p>
-    </section>
-    
-    <section id="resources" class="p-6 bg-gray-800 rounded-lg shadow-md">
-        <h3 class="text-2xl font-semibold">📂 Resources</h3>
-        <p class="text-gray-400 mt-2">Explore coding guides, project files, and useful tools.</p>
-        <a href="#" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">View Resources</a>
-    </section>
-    
-    <section id="blog" class="p-6 bg-gray-800 rounded-lg shadow-md mt-6">
-        <h3 class="text-2xl font-semibold">📜 Blog</h3>
-        <p class="text-gray-400 mt-2">Check out the latest programming insights and tech articles.</p>
-        <a href="#" class="mt-4 inline-block bg-green-500 hover:bg-green-600 px-4 py-2 rounded">Read Blogs</a>
-    </section>
-    
-    <section id="projects" class="p-6 bg-gray-800 rounded-lg shadow-md mt-6">
-        <h3 class="text-2xl font-semibold">🛠️ Project Showcase</h3>
-        <p class="text-gray-400 mt-2">Discover featured projects and collaborations.</p>
-        <a href="#" class="mt-4 inline-block bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded">Explore Projects</a>
-    </section>
-    
-    <section id="youtube" class="p-6 bg-gray-800 rounded-lg shadow-md mt-6">
-        <h3 class="text-2xl font-semibold">🎥 Latest YouTube Videos</h3>
-        <p class="text-gray-400 mt-2">Stay updated with my newest content.</p>
-        <div class="mt-4">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/latest" frameborder="0" allowfullscreen></iframe>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Sai's Profile Picture" class="profile-pic">
+            <h1>Lucky CSX</h1>
         </div>
-    </section>
-</main>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header><section id="home">
+    <h2>Welcome to Lucky CSX</h2>
+    <p>Tech, creativity, and exploration—all in one place.</p>
+</section>
 
-<footer class="p-6 text-center bg-gray-800 mt-8">
-    <p class="text-gray-400">© 2025 Lucky CSX | All rights reserved.</p>
-    <div class="mt-4">
-        <a href="#" class="text-blue-400 hover:text-blue-500 mx-2">Twitter</a>
-        <a href="#" class="text-blue-400 hover:text-blue-500 mx-2">Instagram</a>
-        <a href="#" class="text-blue-400 hover:text-blue-500 mx-2">GitHub</a>
+<section id="resources">
+    <h2>Resources</h2>
+    <p>Download coding resources, cheat sheets, and more.</p>
+</section>
+
+<section id="blog">
+    <h2>Blog</h2>
+    <p>Read the latest insights and tech updates.</p>
+</section>
+
+<section id="projects">
+    <h2>Project Showcase</h2>
+    <p>Check out exciting projects and collaborations.</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Lucky CSX. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+        <a href="#"><img src="youtube-icon.png" alt="YouTube"></a>
     </div>
 </footer>
 
